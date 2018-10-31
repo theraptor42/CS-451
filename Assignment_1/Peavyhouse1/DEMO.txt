@@ -1,0 +1,41 @@
+Caspian Peavyhouse
+Assignment 1
+
+peav2414@syslab04:~/CS-451/Assignment_1$ ./5ps -c
+PID     CMD
+1       /sbin/init
+
+
+peav2414@syslab04:~/CS-451/Assignment_1$ ./5ps -cstv
+PID     S       TIME            SZ              CMD
+1       S       0:00:01         23545           /sbin/init
+
+
+peav2414@syslab04:~/CS-451/Assignment_1$ ./5ps -p 841 -cstv
+PID     S       TIME            SZ              CMD
+841     S       1:44:44         23841           avahi-daemon:
+
+
+peav2414@syslab04:~/CS-451/Assignment_1$ ./5ps -p 841 -cvt
+PID     TIME            SZ              CMD
+841     1:44:44         23841           avahi-daemon:
+
+
+peav2414@syslab04:~/CS-451/Assignment_1$ ./5ps -p 841 -cts
+PID     S       TIME            CMD
+841     S       1:44:44         avahi-daemon:
+
+
+peav2414@syslab04:~/CS-451/Assignment_1$ ./5ps -p 25338 -cts
+PID     S       TIME            CMD
+25338   S       0:00:00         -bash
+
+
+peav2414@syslab04:~/CS-451/Assignment_1$ ./5ps -p 1786 -vc
+PID     SZ              CMD
+1786    79289           /usr/lib/x86_64-linux-gnu/notify-osd
+
+
+peav2414@syslab04:~/CS-451/Assignment_1$ ./5ps -p 21785 -vt
+PID     TIME            SZ
+21785   0:00:02         0
