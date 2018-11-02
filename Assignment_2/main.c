@@ -1,9 +1,25 @@
-#include <stdio.h>
-#include "Elevator.h"
-#include "Passenger.h"
+//All my includes and defines are in my main.h header
+#include "main.h"
 
-int main()
+
+void *myThreadFun(void *vargp)
 {
-    printf("Hello, World!\n");
-    return 0;
+    sleep(2);
+    printf("Printing GeeksQuiz from Thread \n");
+    return NULL;
+}
+
+int main(int argc, char **argv)
+{
+    parseOptions(argc, argv);
+    parsePassengerSchedules();
+
+
+
+    pthread_t thread_id;
+    printf("Before Thread\n");
+    pthread_create(&thread_id, NULL, myThreadFun, NULL);
+    pthread_join(thread_id, NULL);
+    printf("After Thread\n");
+    exit(0);
 }
