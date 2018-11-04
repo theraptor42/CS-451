@@ -1,6 +1,11 @@
-//
-// Created by caspi on 11/2/2018.
-//
+/*
+ *Author: Caspian Peavyhouse
+ *Assignment Number: A2
+ *Date of Submission: 11/03/2018
+ *Name of this file: ParseOptions.h
+ *Description of the program:
+ * Elevator - Simulation of an elevator system
+ */
 
 #ifndef ASSIGNMENT_2_PARSEOPTIONS_H
 #define ASSIGNMENT_2_PARSEOPTIONS_H
@@ -15,7 +20,7 @@ extern int numberOfFloors;
 int waitForCorrectDirection;
 
 //Function Headers
-char* parseOptions(int argc, char **argv);
+void parseOptions(int argc, char **argv);
 int parsePassengerSchedules();
 
 int getNumberOfPeople();

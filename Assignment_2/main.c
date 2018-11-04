@@ -1,7 +1,22 @@
+/*
+ *Author: Caspian Peavyhouse
+ *Assignment Number: A2
+ *Date of Submission: 11/03/2018
+ *Name of this file: main.c
+ *Description of the program:
+ * Elevator - Simulation of an elevator system
+ */
+
 //All my includes and defines are in my main.h header
 #include "main.h"
 
-
+/*
+ *Function Name: main
+ *Input to the method: Command Line Arguments
+ *Output(Return value): None(Exit Status)
+ *Description: Pulls the Parser and OptionsProcessing
+ *             modules together to provide output.
+ */
 int main(int argc, char **argv)
 {
     //Read the passed in parameters and store the data in global variables

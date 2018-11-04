@@ -1,6 +1,11 @@
-//
-// Created by caspi on 11/2/2018.
-//
+/*
+ *Author: Caspian Peavyhouse
+ *Assignment Number: A2
+ *Date of Submission: 11/03/2018
+ *Name of this file: main.h
+ *Description of the program:
+ * Elevator - Simulation of an elevator system
+ */
 
 #ifndef ASSIGNMENT_2_MAIN_H
 #define ASSIGNMENT_2_MAIN_H
@@ -35,16 +40,18 @@ typedef pthread_t   Thread;
 
 
 //Global Variables
-PASSENGER* passengers;//
-ELEVATOR elevator;
+PASSENGER* passengers;//array that holds all the passenger data
+ELEVATOR elevator;//the elevator struct
 
+//protect the various shared data fields
 Semaphore passengersSemaphore;
 Semaphore elevatorSemaphore;
 Semaphore optionsAccessSemaphore;
 Semaphore printLock;
 
-Semaphore* destinationQueue;
-Semaphore* sourceQueue;
+//the array of queues for each floor
+Semaphore* destinationQueue;//inside the elevator
+Semaphore* sourceQueue;//outside the elevator
 
 
 

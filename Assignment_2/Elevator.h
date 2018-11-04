@@ -1,6 +1,11 @@
-//
-// Created by caspi on 10/24/2018.
-//
+/*
+ *Author: Caspian Peavyhouse
+ *Assignment Number: A2
+ *Date of Submission: 11/03/2018
+ *Name of this file: Elevator.h
+ *Description of the program:
+ * Elevator - Simulation of an elevator system
+ */
 
 #ifndef ASSIGNMENT_2_ELEVATOR_H
 #define ASSIGNMENT_2_ELEVATOR_H
@@ -25,9 +30,9 @@ typedef struct Elevator ELEVATOR;
 //defines
 #define SLEEP_TIME              1 //One second
 #define BOTTOM_FLOOR            0
-#define ELEVATOR_UP             1
+#define ELEVATOR_UP             1 //Elevator direction
 #define ELEVATOR_DOWN           -1
-#define COUNT_ALL_FLOORS        -1
+#define COUNT_ALL_FLOORS        -1 //for counting the number of people waiting at a floor
 
 
 //Function prototypes

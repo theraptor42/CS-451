@@ -1,6 +1,11 @@
-//
-// Created by caspi on 11/2/2018.
-//
+/*
+ *Author: Caspian Peavyhouse
+ *Assignment Number: A2
+ *Date of Submission: 11/03/2018
+ *Name of this file: ParseOptions.c
+ *Description of the program:
+ * Elevator - Simulation of an elevator system
+ */
 
 #include "main.h"
 
@@ -8,12 +13,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//this is here because I was having some weird errors
 int numberOfPeople;
 int maxWanderTime;
 int numberOfFloors;
 
-FILE *input;
-char* parseOptions(int argc, char **argv)
+//used for executing from windows
+FILE *input; // source of the passenger schedules
+
+
+/*
+ *Function Name: parseOptions
+ *Input to the method: the parameters from the command line
+ *Output(Return value): void
+ *Description: check the parameters provided by the user
+ */
+void parseOptions(int argc, char **argv)
 {
     int getOptStatus;
     //Default values
@@ -22,9 +37,9 @@ char* parseOptions(int argc, char **argv)
     numberOfFloors = 10;
     waitForCorrectDirection = FALSE;
 
-    int fTest = 0;
+    int fileTest = 0;// windows os check
     //read the option string
-    while ((getOptStatus = getopt (argc, argv, "f:p:w:td")) != -1)
+    while ((getOptStatus = getopt (argc, argv, "tdf:p:w:")) != -1)
     {
         switch (getOptStatus)
         {
@@ -38,10 +53,13 @@ char* parseOptions(int argc, char **argv)
             case 'w':
                 sscanf(optarg, "%d", &maxWanderTime);
                 break;
-            case 't':
-                fTest = 1;
-                break;
+            //case 't':
+                //windows can't handle the < so we have to give it a file to fopen
+                //fileTest = 1; // feature removed from final product
+                //break;
             case 'd':
+                //Extra Credit - d for direction
+                //if true, passengers will wait for correct direction
                 waitForCorrectDirection = TRUE;
                 break;
 
@@ -64,9 +82,12 @@ char* parseOptions(int argc, char **argv)
         }
     }
 
-    if(!fTest){
+    if(!fileTest)
+    {
         input = stdin;
-    } else {
+    } else
+    {
+        //hard coded value for my local machine
         input = fopen("input.txt","r");
     }
 
@@ -76,20 +97,28 @@ char* parseOptions(int argc, char **argv)
         printf("Please ensure that all parameters are positive integers\n");
         exit(OPTIONS_ERROR_EXIT_STATUS);
     }
-    return NULL;
 }
 
+
+/*
+ *Function Name: parsePassengerSchedules
+ *Input to the method: none
+ *Output(Return value): int - successful execution
+ *Description: parse the input file of passenger schedules
+ */
 int parsePassengerSchedules()
 {
     char buffer[STDIN_BUFFER_SIZE];
     char* result;
     int passengerCount = 0;
-    while((fgets(buffer, STDIN_BUFFER_SIZE , input)) != NULL)
+    //build the passengers array
+    while((result = fgets(buffer, STDIN_BUFFER_SIZE , input)) != NULL && result != '\0')
     {
         PASSENGER newPassenger = constructPassenger(passengerCount, buffer);
         passengers[newPassenger.id] = newPassenger;
         passengerCount++;
     }
+    //check if all the numbers add up
     if (passengerCount > numberOfPeople)
     {
         printf("Too many schedules were provided.  %d passengers were specified but %d schedules were given.\n",
@@ -105,13 +134,12 @@ int parsePassengerSchedules()
     return 0;
 }
 
-int getNumberOfPeople()
-{
-    sem_wait(&optionsAccessSemaphore);
-    int returnValue = numberOfPeople;
-    sem_post(&optionsAccessSemaphore);
-    return returnValue;
-}
+/*
+ *Function Name: getMaxWanderTime
+ *Input to the method: none
+ *Output(Return value): int - the maximum wander time
+ *Description: thread safe access to the maximum wander time
+ */
 int getMaxWanderTime()
 {
     sem_wait(&optionsAccessSemaphore);
@@ -119,6 +147,13 @@ int getMaxWanderTime()
     sem_post(&optionsAccessSemaphore);
     return returnValue;
 }
+
+/*
+ *Function Name: getNumberOfFloors
+ *Input to the method: none
+ *Output(Return value): int - the number of floors
+ *Description: thread safe access to the number of floor
+ */
 int getNumberOfFloors()
 {
     sem_wait(&optionsAccessSemaphore);

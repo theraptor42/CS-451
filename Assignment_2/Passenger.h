@@ -1,6 +1,11 @@
-//
-// Created by caspi on 10/24/2018.
-//
+/*
+ *Author: Caspian Peavyhouse
+ *Assignment Number: A2
+ *Date of Submission: 11/03/2018
+ *Name of this file: Passenger.h
+ *Description of the program:
+ * Elevator - Simulation of an elevator system
+ */
 
 #ifndef ASSIGNMENT_2_PASSENGER_H
 #define ASSIGNMENT_2_PASSENGER_H

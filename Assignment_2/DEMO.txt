@@ -1,0 +1,1857 @@
+Caspian Peavyhouse
+Assignment 2
+Demo.txt
+
+Case 1:
+
+peav2414@syslab03:~/CS-451/Assignment_2$ ./outfile -p 1 -f 11 < ./input.txt
+Person 0: Waiting for elevator at floor 0
+Number of people waiting at floor:
+Floor Number                            Number of People
+0                               1
+1                               0
+2                               0
+3                               0
+4                               0
+5                               0
+6                               0
+7                               0
+8                               0
+9                               0
+10                              0
+The elevator is stopping at floor 0
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 0
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+Person 0: Boarded elevator from floor 0 to floor 2
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 2
+Thread sleeping for 1 seconds
+The elevator is delivering passengers to floor 2
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+Passenger 0: Got off elevator at floor 2
+Passenger 0: Wandering for 5 second(s)
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+Person 0: Waiting for elevator at floor 2
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+The elevator is moving to floor 10
+Thread sleeping for 1 seconds
+The elevator is now traveling down
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 2
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 2
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+Person 0: Boarded elevator from floor 2 to floor 10
+The elevator is moving to floor 0
+Thread sleeping for 1 seconds
+The elevator is now traveling up
+Number of people waiting at floor:
+Floor Number                            Number of People
+0                               0
+1                               0
+2                               0
+3                               0
+4                               0
+5                               0
+6                               0
+7                               0
+8                               0
+9                               0
+10                              0
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+The elevator is moving to floor 10
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 10
+Thread sleeping for 1 seconds
+The elevator is delivering passengers to floor 10
+The elevator is now traveling down
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+Passenger 0: Got off elevator at floor 10
+Passenger 0: Wandering for 5 second(s)
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+Person 0: Waiting for elevator at floor 10
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 0
+Thread sleeping for 1 seconds
+The elevator is now traveling up
+Number of people waiting at floor:
+Floor Number                            Number of People
+0                               0
+1                               0
+2                               0
+3                               0
+4                               0
+5                               0
+6                               0
+7                               0
+8                               0
+9                               0
+10                              1
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+The elevator is moving to floor 10
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 10
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 10
+The elevator is now traveling down
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+Person 0: Boarded elevator from floor 10 to floor 0
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 0
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 0
+Thread sleeping for 1 seconds
+The elevator is delivering passengers to floor 0
+The elevator is now traveling up
+Number of people waiting at floor:
+Floor Number                            Number of People
+0                               0
+1                               0
+2                               0
+3                               0
+4                               0
+5                               0
+6                               0
+7                               0
+8                               0
+9                               0
+10                              0
+Passenger 0: Got off elevator at floor 0
+Passenger 0: Wandering for 5 second(s)
+The elevator has no passengers waiting
+Thread sleeping for 10 seconds
+Passenger 0: Left the building.  Thread exiting.
+All passengers have left the building
+Elevator Thread exiting
+
+
+Case 2:
+
+
+peav2414@syslab03:~/CS-451/Assignment_2$ ./outfile -p 5 -f 11 -w 10 < ./input.txt
+Person 0: Waiting for elevator at floor 0
+Person 4: Waiting for elevator at floor 0
+Person 2: Waiting for elevator at floor 0
+Person 1: Waiting for elevator at floor 0
+Person 3: Waiting for elevator at floor 0
+Number of people waiting at floor:
+Floor Number                            Number of People
+0                               5
+1                               0
+2                               0
+3                               0
+4                               0
+5                               0
+6                               0
+7                               0
+8                               0
+9                               0
+10                              0
+The elevator is stopping at floor 0
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 0
+Person 1: Boarded elevator from floor 0 to floor 3
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+Person 3: Boarded elevator from floor 0 to floor 7
+Person 4: Boarded elevator from floor 0 to floor 9
+Person 0: Boarded elevator from floor 0 to floor 1
+Person 2: Boarded elevator from floor 0 to floor 5
+The elevator is stopping at floor 1
+Thread sleeping for 1 seconds
+The elevator is delivering passengers to floor 1
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+Passenger 0: Got off elevator at floor 1
+Passenger 0: Wandering for 1 second(s)
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+Person 0: Waiting for elevator at floor 1
+The elevator is stopping at floor 3
+Thread sleeping for 1 seconds
+The elevator is delivering passengers to floor 3
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+Passenger 1: Got off elevator at floor 3
+Passenger 1: Wandering for 1 second(s)
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+Person 1: Waiting for elevator at floor 3
+The elevator is stopping at floor 5
+Thread sleeping for 1 seconds
+The elevator is delivering passengers to floor 5
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+Passenger 2: Got off elevator at floor 5
+Passenger 2: Wandering for 1 second(s)
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+Person 2: Waiting for elevator at floor 5
+The elevator is stopping at floor 7
+Thread sleeping for 1 seconds
+The elevator is delivering passengers to floor 7
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+Passenger 3: Got off elevator at floor 7
+Passenger 3: Wandering for 1 second(s)
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+Person 3: Waiting for elevator at floor 7
+The elevator is stopping at floor 9
+Thread sleeping for 1 seconds
+The elevator is delivering passengers to floor 9
+The elevator is moving to floor 10
+Thread sleeping for 1 seconds
+Passenger 4: Got off elevator at floor 9
+Passenger 4: Wandering for 1 second(s)
+The elevator is now traveling down
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+Person 4: Waiting for elevator at floor 9
+The elevator is stopping at floor 9
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 9
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+Person 4: Boarded elevator from floor 9 to floor 10
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 7
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 7
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+Person 3: Boarded elevator from floor 7 to floor 10
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 5
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 5
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+Person 2: Boarded elevator from floor 5 to floor 10
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 3
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 3
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+Person 1: Boarded elevator from floor 3 to floor 10
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 1
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 1
+The elevator is moving to floor 0
+Thread sleeping for 1 seconds
+Person 0: Boarded elevator from floor 1 to floor 10
+The elevator is now traveling up
+Number of people waiting at floor:
+Floor Number                            Number of People
+0                               0
+1                               0
+2                               0
+3                               0
+4                               0
+5                               0
+6                               0
+7                               0
+8                               0
+9                               0
+10                              0
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+The elevator is moving to floor 10
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 10
+Thread sleeping for 1 seconds
+The elevator is delivering passengers to floor 10
+Passenger 1: Got off elevator at floor 10
+Passenger 1: Wandering for 2 second(s)
+The elevator is now traveling down
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+Passenger 4: Got off elevator at floor 10
+Passenger 4: Wandering for 5 second(s)
+Passenger 2: Got off elevator at floor 10
+Passenger 2: Wandering for 3 second(s)
+Passenger 3: Got off elevator at floor 10
+Passenger 3: Wandering for 4 second(s)
+Passenger 0: Got off elevator at floor 10
+Passenger 0: Wandering for 1 second(s)
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+Person 0: Waiting for elevator at floor 10
+Person 1: Waiting for elevator at floor 10
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+Person 2: Waiting for elevator at floor 10
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+Person 3: Waiting for elevator at floor 10
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+Person 4: Waiting for elevator at floor 10
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 0
+Thread sleeping for 1 seconds
+The elevator is now traveling up
+Number of people waiting at floor:
+Floor Number                            Number of People
+0                               0
+1                               0
+2                               0
+3                               0
+4                               0
+5                               0
+6                               0
+7                               0
+8                               0
+9                               0
+10                              5
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+The elevator is moving to floor 10
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 10
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 10
+The elevator is now traveling down
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+Person 4: Boarded elevator from floor 10 to floor 0
+Person 3: Boarded elevator from floor 10 to floor 0
+Person 2: Boarded elevator from floor 10 to floor 0
+Person 0: Boarded elevator from floor 10 to floor 0
+Person 1: Boarded elevator from floor 10 to floor 0
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 0
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 0
+Thread sleeping for 1 seconds
+The elevator is delivering passengers to floor 0
+Passenger 1: Got off elevator at floor 0
+Passenger 1: Wandering for 5 second(s)
+Passenger 0: Got off elevator at floor 0
+Passenger 0: Wandering for 5 second(s)
+The elevator is now traveling up
+Number of people waiting at floor:
+Floor Number                            Number of People
+0                               0
+1                               0
+2                               0
+3                               0
+4                               0
+5                               0
+6                               0
+7                               0
+8                               0
+9                               0
+10                              0
+The elevator has no passengers waiting
+Thread sleeping for 10 seconds
+Passenger 2: Got off elevator at floor 0
+Passenger 2: Wandering for 5 second(s)
+Passenger 3: Got off elevator at floor 0
+Passenger 3: Wandering for 5 second(s)
+Passenger 4: Got off elevator at floor 0
+Passenger 4: Wandering for 5 second(s)
+Passenger 1: Left the building.  Thread exiting.
+Passenger 0: Left the building.  Thread exiting.
+Passenger 2: Left the building.  Thread exiting.
+Passenger 3: Left the building.  Thread exiting.
+Passenger 4: Left the building.  Thread exiting.
+All passengers have left the building
+Elevator Thread exiting
+
+
+Case 3:
+
+
+peav2414@syslab03:~/CS-451/Assignment_2$ ./outfile -p 5 -f 12 -w 10 < ./input.txt
+Person 1: Waiting for elevator at floor 0
+Person 3: Waiting for elevator at floor 0
+Person 0: Waiting for elevator at floor 0
+Person 4: Waiting for elevator at floor 0
+Person 2: Waiting for elevator at floor 0
+Number of people waiting at floor:
+Floor Number				Number of People
+0				5
+1				0
+2				0
+3				0
+4				0
+5				0
+6				0
+7				0
+8				0
+9				0
+10				0
+11				0
+The elevator is stopping at floor 0
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 0
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+Person 4: Boarded elevator from floor 0 to floor 10
+Person 2: Boarded elevator from floor 0 to floor 6
+Person 0: Boarded elevator from floor 0 to floor 2
+Person 1: Boarded elevator from floor 0 to floor 4
+Person 3: Boarded elevator from floor 0 to floor 8
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 2
+Thread sleeping for 1 seconds
+The elevator is delivering passengers to floor 2
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+Passenger 0: Got off elevator at floor 2
+Passenger 0: Wandering for 1 second(s)
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+Person 0: Waiting for elevator at floor 2
+The elevator is stopping at floor 4
+Thread sleeping for 1 seconds
+The elevator is delivering passengers to floor 4
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+Passenger 1: Got off elevator at floor 4
+Passenger 1: Wandering for 1 second(s)
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+Person 1: Waiting for elevator at floor 4
+The elevator is stopping at floor 6
+Thread sleeping for 1 seconds
+The elevator is delivering passengers to floor 6
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+Passenger 2: Got off elevator at floor 6
+Passenger 2: Wandering for 1 second(s)
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+Person 2: Waiting for elevator at floor 6
+The elevator is stopping at floor 8
+Thread sleeping for 1 seconds
+The elevator is delivering passengers to floor 8
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+Passenger 3: Got off elevator at floor 8
+Passenger 3: Wandering for 1 second(s)
+The elevator is moving to floor 10
+Thread sleeping for 1 seconds
+Person 3: Waiting for elevator at floor 8
+The elevator is stopping at floor 10
+Thread sleeping for 1 seconds
+The elevator is delivering passengers to floor 10
+The elevator is moving to floor 11
+Thread sleeping for 1 seconds
+Passenger 4: Got off elevator at floor 10
+Passenger 4: Wandering for 1 second(s)
+The elevator is now traveling down
+The elevator is moving to floor 10
+Thread sleeping for 1 seconds
+Person 4: Waiting for elevator at floor 10
+The elevator is stopping at floor 10
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 10
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+Person 4: Boarded elevator from floor 10 to floor 11
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 8
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 8
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+Person 3: Boarded elevator from floor 8 to floor 11
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 6
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 6
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+Person 2: Boarded elevator from floor 6 to floor 11
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 4
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 4
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+Person 1: Boarded elevator from floor 4 to floor 11
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 2
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 2
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+Person 0: Boarded elevator from floor 2 to floor 11
+The elevator is moving to floor 0
+Thread sleeping for 1 seconds
+The elevator is now traveling up
+Number of people waiting at floor:
+Floor Number				Number of People
+0				0
+1				0
+2				0
+3				0
+4				0
+5				0
+6				0
+7				0
+8				0
+9				0
+10				0
+11				0
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+The elevator is moving to floor 10
+Thread sleeping for 1 seconds
+The elevator is moving to floor 11
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 11
+Thread sleeping for 1 seconds
+The elevator is delivering passengers to floor 11
+Passenger 1: Got off elevator at floor 11
+Passenger 1: Wandering for 2 second(s)
+The elevator is now traveling down
+The elevator is moving to floor 10
+Thread sleeping for 1 seconds
+Passenger 0: Got off elevator at floor 11
+Passenger 0: Wandering for 1 second(s)
+Passenger 4: Got off elevator at floor 11
+Passenger 4: Wandering for 5 second(s)
+Passenger 2: Got off elevator at floor 11
+Passenger 2: Wandering for 3 second(s)
+Passenger 3: Got off elevator at floor 11
+Passenger 3: Wandering for 4 second(s)
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+Person 0: Waiting for elevator at floor 11
+Person 1: Waiting for elevator at floor 11
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+Person 2: Waiting for elevator at floor 11
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+Person 3: Waiting for elevator at floor 11
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+Person 4: Waiting for elevator at floor 11
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 0
+Thread sleeping for 1 seconds
+The elevator is now traveling up
+Number of people waiting at floor:
+Floor Number				Number of People
+0				0
+1				0
+2				0
+3				0
+4				0
+5				0
+6				0
+7				0
+8				0
+9				0
+10				0
+11				5
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+The elevator is moving to floor 10
+Thread sleeping for 1 seconds
+The elevator is moving to floor 11
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 11
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 11
+Person 3: Boarded elevator from floor 11 to floor 1
+The elevator is now traveling down
+The elevator is moving to floor 10
+Thread sleeping for 1 seconds
+Person 2: Boarded elevator from floor 11 to floor 1
+Person 4: Boarded elevator from floor 11 to floor 1
+Person 0: Boarded elevator from floor 11 to floor 1
+Person 1: Boarded elevator from floor 11 to floor 1
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 1
+Thread sleeping for 1 seconds
+The elevator is delivering passengers to floor 1
+Passenger 1: Got off elevator at floor 1
+Passenger 1: Wandering for 5 second(s)
+Passenger 0: Got off elevator at floor 1
+Passenger 0: Wandering for 5 second(s)
+Passenger 3: Got off elevator at floor 1
+Passenger 3: Wandering for 5 second(s)
+Passenger 4: Got off elevator at floor 1
+Passenger 4: Wandering for 5 second(s)
+Passenger 2: Got off elevator at floor 1
+Passenger 2: Wandering for 5 second(s)
+The elevator is moving to floor 0
+Thread sleeping for 1 seconds
+The elevator is now traveling up
+Number of people waiting at floor:
+Floor Number				Number of People
+0				0
+1				0
+2				0
+3				0
+4				0
+5				0
+6				0
+7				0
+8				0
+9				0
+10				0
+11				0
+The elevator has no passengers waiting
+Thread sleeping for 10 seconds
+Person 1: Waiting for elevator at floor 1
+Person 0: Waiting for elevator at floor 1
+Person 3: Waiting for elevator at floor 1
+Person 4: Waiting for elevator at floor 1
+Person 2: Waiting for elevator at floor 1
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 1
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 1
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+Person 4: Boarded elevator from floor 1 to floor 6
+Person 2: Boarded elevator from floor 1 to floor 4
+Person 1: Boarded elevator from floor 1 to floor 3
+Person 0: Boarded elevator from floor 1 to floor 2
+Person 3: Boarded elevator from floor 1 to floor 5
+The elevator is stopping at floor 2
+Thread sleeping for 1 seconds
+The elevator is delivering passengers to floor 2
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+Passenger 0: Got off elevator at floor 2
+Passenger 0: Wandering for 1 second(s)
+The elevator is stopping at floor 3
+Thread sleeping for 1 seconds
+Person 0: Waiting for elevator at floor 2
+The elevator is delivering passengers to floor 3
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+Passenger 1: Got off elevator at floor 3
+Passenger 1: Wandering for 1 second(s)
+The elevator is stopping at floor 4
+Thread sleeping for 1 seconds
+Person 1: Waiting for elevator at floor 3
+The elevator is delivering passengers to floor 4
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+Passenger 2: Got off elevator at floor 4
+Passenger 2: Wandering for 1 second(s)
+The elevator is stopping at floor 5
+Thread sleeping for 1 seconds
+Person 2: Waiting for elevator at floor 4
+The elevator is delivering passengers to floor 5
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+Passenger 3: Got off elevator at floor 5
+Passenger 3: Wandering for 1 second(s)
+The elevator is stopping at floor 6
+Thread sleeping for 1 seconds
+Person 3: Waiting for elevator at floor 5
+The elevator is delivering passengers to floor 6
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+Passenger 4: Got off elevator at floor 6
+Passenger 4: Wandering for 1 second(s)
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+Person 4: Waiting for elevator at floor 6
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+The elevator is moving to floor 10
+Thread sleeping for 1 seconds
+The elevator is moving to floor 11
+Thread sleeping for 1 seconds
+The elevator is now traveling down
+The elevator is moving to floor 10
+Thread sleeping for 1 seconds
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 6
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 6
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+Person 4: Boarded elevator from floor 6 to floor 7
+The elevator is stopping at floor 5
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 5
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+Person 3: Boarded elevator from floor 5 to floor 6
+The elevator is stopping at floor 4
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 4
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+Person 2: Boarded elevator from floor 4 to floor 5
+The elevator is stopping at floor 3
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 3
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+Person 1: Boarded elevator from floor 3 to floor 4
+The elevator is stopping at floor 2
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 2
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+Person 0: Boarded elevator from floor 2 to floor 3
+The elevator is moving to floor 0
+Thread sleeping for 1 seconds
+The elevator is now traveling up
+Number of people waiting at floor:
+Floor Number				Number of People
+0				0
+1				0
+2				0
+3				0
+4				0
+5				0
+6				0
+7				0
+8				0
+9				0
+10				0
+11				0
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 3
+Thread sleeping for 1 seconds
+The elevator is delivering passengers to floor 3
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+Passenger 0: Got off elevator at floor 3
+Passenger 0: Wandering for 1 second(s)
+The elevator is stopping at floor 4
+Thread sleeping for 1 seconds
+Person 0: Waiting for elevator at floor 3
+The elevator is delivering passengers to floor 4
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+Passenger 1: Got off elevator at floor 4
+Passenger 1: Wandering for 1 second(s)
+The elevator is stopping at floor 5
+Thread sleeping for 1 seconds
+Person 1: Waiting for elevator at floor 4
+The elevator is delivering passengers to floor 5
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+Passenger 2: Got off elevator at floor 5
+Passenger 2: Wandering for 1 second(s)
+The elevator is stopping at floor 6
+Thread sleeping for 1 seconds
+Person 2: Waiting for elevator at floor 5
+The elevator is delivering passengers to floor 6
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+Passenger 3: Got off elevator at floor 6
+Passenger 3: Wandering for 1 second(s)
+The elevator is stopping at floor 7
+Thread sleeping for 1 seconds
+Person 3: Waiting for elevator at floor 6
+The elevator is delivering passengers to floor 7
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+Passenger 4: Got off elevator at floor 7
+Passenger 4: Wandering for 1 second(s)
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+Person 4: Waiting for elevator at floor 7
+The elevator is moving to floor 10
+Thread sleeping for 1 seconds
+The elevator is moving to floor 11
+Thread sleeping for 1 seconds
+The elevator is now traveling down
+The elevator is moving to floor 10
+Thread sleeping for 1 seconds
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 7
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 7
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+Person 4: Boarded elevator from floor 7 to floor 8
+The elevator is stopping at floor 6
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 6
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+Person 3: Boarded elevator from floor 6 to floor 7
+The elevator is stopping at floor 5
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 5
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+Person 2: Boarded elevator from floor 5 to floor 6
+The elevator is stopping at floor 4
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 4
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+Person 1: Boarded elevator from floor 4 to floor 5
+The elevator is stopping at floor 3
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 3
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+Person 0: Boarded elevator from floor 3 to floor 4
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 0
+Thread sleeping for 1 seconds
+The elevator is now traveling up
+Number of people waiting at floor:
+Floor Number				Number of People
+0				0
+1				0
+2				0
+3				0
+4				0
+5				0
+6				0
+7				0
+8				0
+9				0
+10				0
+11				0
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 4
+Thread sleeping for 1 seconds
+The elevator is delivering passengers to floor 4
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+Passenger 0: Got off elevator at floor 4
+Passenger 0: Wandering for 1 second(s)
+The elevator is stopping at floor 5
+Thread sleeping for 1 seconds
+Person 0: Waiting for elevator at floor 4
+The elevator is delivering passengers to floor 5
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+Passenger 1: Got off elevator at floor 5
+Passenger 1: Wandering for 1 second(s)
+The elevator is stopping at floor 6
+Thread sleeping for 1 seconds
+Person 1: Waiting for elevator at floor 5
+The elevator is delivering passengers to floor 6
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+Passenger 2: Got off elevator at floor 6
+Passenger 2: Wandering for 1 second(s)
+Person 2: Waiting for elevator at floor 6
+The elevator is stopping at floor 7
+Thread sleeping for 1 seconds
+The elevator is delivering passengers to floor 7
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+Passenger 3: Got off elevator at floor 7
+Passenger 3: Wandering for 1 second(s)
+The elevator is stopping at floor 8
+Thread sleeping for 1 seconds
+Person 3: Waiting for elevator at floor 7
+The elevator is delivering passengers to floor 8
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+Passenger 4: Got off elevator at floor 8
+Passenger 4: Wandering for 1 second(s)
+The elevator is moving to floor 10
+Thread sleeping for 1 seconds
+Person 4: Waiting for elevator at floor 8
+The elevator is moving to floor 11
+Thread sleeping for 1 seconds
+The elevator is now traveling down
+The elevator is moving to floor 10
+Thread sleeping for 1 seconds
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 8
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 8
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+Person 4: Boarded elevator from floor 8 to floor 9
+The elevator is stopping at floor 7
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 7
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+Person 3: Boarded elevator from floor 7 to floor 8
+The elevator is stopping at floor 6
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 6
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+Person 2: Boarded elevator from floor 6 to floor 7
+The elevator is stopping at floor 5
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 5
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+Person 1: Boarded elevator from floor 5 to floor 6
+The elevator is stopping at floor 4
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 4
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+Person 0: Boarded elevator from floor 4 to floor 5
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 0
+Thread sleeping for 1 seconds
+The elevator is now traveling up
+Number of people waiting at floor:
+Floor Number				Number of People
+0				0
+1				0
+2				0
+3				0
+4				0
+5				0
+6				0
+7				0
+8				0
+9				0
+10				0
+11				0
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 5
+Thread sleeping for 1 seconds
+The elevator is delivering passengers to floor 5
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+Passenger 0: Got off elevator at floor 5
+Passenger 0: Wandering for 1 second(s)
+The elevator is stopping at floor 6
+Thread sleeping for 1 seconds
+Person 0: Waiting for elevator at floor 5
+The elevator is delivering passengers to floor 6
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+Passenger 1: Got off elevator at floor 6
+Passenger 1: Wandering for 1 second(s)
+The elevator is stopping at floor 7
+Thread sleeping for 1 seconds
+Person 1: Waiting for elevator at floor 6
+The elevator is delivering passengers to floor 7
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+Passenger 2: Got off elevator at floor 7
+Passenger 2: Wandering for 1 second(s)
+The elevator is stopping at floor 8
+Thread sleeping for 1 seconds
+Person 2: Waiting for elevator at floor 7
+The elevator is delivering passengers to floor 8
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+Passenger 3: Got off elevator at floor 8
+Passenger 3: Wandering for 1 second(s)
+The elevator is stopping at floor 9
+Thread sleeping for 1 seconds
+Person 3: Waiting for elevator at floor 8
+The elevator is delivering passengers to floor 9
+The elevator is moving to floor 10
+Thread sleeping for 1 seconds
+Passenger 4: Got off elevator at floor 9
+Passenger 4: Wandering for 1 second(s)
+The elevator is moving to floor 11
+Thread sleeping for 1 seconds
+Person 4: Waiting for elevator at floor 9
+The elevator is now traveling down
+The elevator is moving to floor 10
+Thread sleeping for 1 seconds
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 9
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 9
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+Person 4: Boarded elevator from floor 9 to floor 10
+The elevator is stopping at floor 8
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 8
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+Person 3: Boarded elevator from floor 8 to floor 9
+The elevator is stopping at floor 7
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 7
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+Person 2: Boarded elevator from floor 7 to floor 8
+The elevator is stopping at floor 6
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 6
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+Person 1: Boarded elevator from floor 6 to floor 7
+The elevator is stopping at floor 5
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 5
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+Person 0: Boarded elevator from floor 5 to floor 6
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 0
+Thread sleeping for 1 seconds
+The elevator is now traveling up
+Number of people waiting at floor:
+Floor Number				Number of People
+0				0
+1				0
+2				0
+3				0
+4				0
+5				0
+6				0
+7				0
+8				0
+9				0
+10				0
+11				0
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 6
+Thread sleeping for 1 seconds
+The elevator is delivering passengers to floor 6
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+Passenger 0: Got off elevator at floor 6
+Passenger 0: Wandering for 1 second(s)
+The elevator is stopping at floor 7
+Thread sleeping for 1 seconds
+Person 0: Waiting for elevator at floor 6
+The elevator is delivering passengers to floor 7
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+Passenger 1: Got off elevator at floor 7
+Passenger 1: Wandering for 1 second(s)
+The elevator is stopping at floor 8
+Thread sleeping for 1 seconds
+Person 1: Waiting for elevator at floor 7
+The elevator is delivering passengers to floor 8
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+Passenger 2: Got off elevator at floor 8
+Passenger 2: Wandering for 1 second(s)
+The elevator is stopping at floor 9
+Thread sleeping for 1 seconds
+Person 2: Waiting for elevator at floor 8
+The elevator is delivering passengers to floor 9
+The elevator is moving to floor 10
+Thread sleeping for 1 seconds
+Passenger 3: Got off elevator at floor 9
+Passenger 3: Wandering for 1 second(s)
+The elevator is stopping at floor 10
+Thread sleeping for 1 seconds
+Person 3: Waiting for elevator at floor 9
+The elevator is delivering passengers to floor 10
+The elevator is moving to floor 11
+Thread sleeping for 1 seconds
+Passenger 4: Got off elevator at floor 10
+Passenger 4: Wandering for 1 second(s)
+The elevator is now traveling down
+The elevator is moving to floor 10
+Thread sleeping for 1 seconds
+Person 4: Waiting for elevator at floor 10
+The elevator is stopping at floor 10
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 10
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+Person 4: Boarded elevator from floor 10 to floor 11
+The elevator is stopping at floor 9
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 9
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+Person 3: Boarded elevator from floor 9 to floor 10
+The elevator is stopping at floor 8
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 8
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+Person 2: Boarded elevator from floor 8 to floor 9
+The elevator is stopping at floor 7
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 7
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+Person 1: Boarded elevator from floor 7 to floor 8
+The elevator is stopping at floor 6
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 6
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+Person 0: Boarded elevator from floor 6 to floor 7
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 0
+Thread sleeping for 1 seconds
+The elevator is now traveling up
+Number of people waiting at floor:
+Floor Number				Number of People
+0				0
+1				0
+2				0
+3				0
+4				0
+5				0
+6				0
+7				0
+8				0
+9				0
+10				0
+11				0
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 7
+Thread sleeping for 1 seconds
+The elevator is delivering passengers to floor 7
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+Passenger 0: Got off elevator at floor 7
+Passenger 0: Wandering for 1 second(s)
+The elevator is stopping at floor 8
+Thread sleeping for 1 seconds
+Person 0: Waiting for elevator at floor 7
+The elevator is delivering passengers to floor 8
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+Passenger 1: Got off elevator at floor 8
+Passenger 1: Wandering for 1 second(s)
+The elevator is stopping at floor 9
+Thread sleeping for 1 seconds
+Person 1: Waiting for elevator at floor 8
+The elevator is delivering passengers to floor 9
+The elevator is moving to floor 10
+Thread sleeping for 1 seconds
+Passenger 2: Got off elevator at floor 9
+Passenger 2: Wandering for 1 second(s)
+The elevator is stopping at floor 10
+Thread sleeping for 1 seconds
+Person 2: Waiting for elevator at floor 9
+The elevator is delivering passengers to floor 10
+The elevator is moving to floor 11
+Thread sleeping for 1 seconds
+Passenger 3: Got off elevator at floor 10
+Passenger 3: Wandering for 1 second(s)
+The elevator is stopping at floor 11
+Thread sleeping for 1 seconds
+Person 3: Waiting for elevator at floor 10
+The elevator is delivering passengers to floor 11
+The elevator is now traveling down
+The elevator is moving to floor 10
+Thread sleeping for 1 seconds
+Passenger 4: Got off elevator at floor 11
+Passenger 4: Wandering for 1 second(s)
+The elevator is stopping at floor 10
+Thread sleeping for 1 seconds
+Person 4: Waiting for elevator at floor 11
+The elevator is loading passengers from floor 10
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+Person 3: Boarded elevator from floor 10 to floor 0
+The elevator is stopping at floor 9
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 9
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+Person 2: Boarded elevator from floor 9 to floor 0
+The elevator is stopping at floor 8
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 8
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+Person 1: Boarded elevator from floor 8 to floor 0
+The elevator is stopping at floor 7
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 7
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+Person 0: Boarded elevator from floor 7 to floor 0
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 0
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 0
+Thread sleeping for 1 seconds
+The elevator is delivering passengers to floor 0
+The elevator is now traveling up
+Number of people waiting at floor:
+Floor Number				Number of People
+0				0
+1				0
+2				0
+3				0
+4				0
+5				0
+6				0
+7				0
+8				0
+9				0
+10				0
+11				1
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+Passenger 0: Got off elevator at floor 0
+Passenger 0: Wandering for 2 second(s)
+Passenger 1: Got off elevator at floor 0
+Passenger 1: Wandering for 2 second(s)
+Passenger 2: Got off elevator at floor 0
+Passenger 2: Wandering for 2 second(s)
+Passenger 3: Got off elevator at floor 0
+Passenger 3: Wandering for 2 second(s)
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+Passenger 0: Left the building.  Thread exiting.
+Passenger 1: Left the building.  Thread exiting.
+Passenger 2: Left the building.  Thread exiting.
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+Passenger 3: Left the building.  Thread exiting.
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+The elevator is moving to floor 10
+Thread sleeping for 1 seconds
+The elevator is moving to floor 11
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 11
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 11
+The elevator is now traveling down
+The elevator is moving to floor 10
+Thread sleeping for 1 seconds
+Person 4: Boarded elevator from floor 11 to floor 0
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 0
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 0
+Thread sleeping for 1 seconds
+The elevator is delivering passengers to floor 0
+The elevator is now traveling up
+Number of people waiting at floor:
+Floor Number				Number of People
+0				0
+1				0
+2				0
+3				0
+4				0
+5				0
+6				0
+7				0
+8				0
+9				0
+10				0
+11				0
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+Passenger 4: Got off elevator at floor 0
+Passenger 4: Wandering for 3 second(s)
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+Passenger 4: Left the building.  Thread exiting.
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+The elevator is moving to floor 10
+Thread sleeping for 1 seconds
+The elevator is moving to floor 11
+Thread sleeping for 1 seconds
+The elevator is now traveling down
+The elevator is moving to floor 10
+Thread sleeping for 1 seconds
+The elevator is moving to floor 9
+Thread sleeping for 1 seconds
+The elevator is moving to floor 8
+Thread sleeping for 1 seconds
+The elevator is moving to floor 7
+Thread sleeping for 1 seconds
+The elevator is moving to floor 6
+Thread sleeping for 1 seconds
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 0
+Thread sleeping for 1 seconds
+The elevator is now traveling up
+Number of people waiting at floor:
+Floor Number				Number of People
+0				0
+1				0
+2				0
+3				0
+4				0
+5				0
+6				0
+7				0
+8				0
+9				0
+10				0
+11				0
+The elevator has no passengers waiting
+Thread sleeping for 10 seconds
+All passengers have left the building
+Elevator Thread exiting
+
+
+
+
+Extra credit:
+Input: 4 4 1 5 1 4 1 0 2
+
+
+peav2414@syslab03:~/CS-451/Assignment_2$ ./outfile -p 1 -f 6 -w 8 -d  < ./input.txt
+Person 0: Waiting for elevator at floor 0
+Number of people waiting at floor:
+Floor Number                            Number of People
+0                               1
+1                               0
+2                               0
+3                               0
+4                               0
+5                               0
+The elevator is stopping at floor 0
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 0
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+Person 0: Boarded elevator from floor 0 to floor 4
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 4
+Thread sleeping for 1 seconds
+The elevator is delivering passengers to floor 4
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+Passenger 0: Got off elevator at floor 4
+Passenger 0: Wandering for 1 second(s)
+The elevator is now traveling down
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+Person 0: Waiting for elevator at floor 4
+The elevator is stopping at floor 4
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 4
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+Person 0: Waiting for the elevator to travel right direction
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 0
+Thread sleeping for 1 seconds
+The elevator is now traveling up
+Number of people waiting at floor:
+Floor Number                            Number of People
+0                               0
+1                               0
+2                               0
+3                               0
+4                               1
+5                               0
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 4
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 4
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+Person 0: Boarded elevator from floor 4 to floor 5
+The elevator is stopping at floor 5
+Thread sleeping for 1 seconds
+The elevator is delivering passengers to floor 5
+The elevator is now traveling down
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+Passenger 0: Got off elevator at floor 5
+Passenger 0: Wandering for 1 second(s)
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+Person 0: Waiting for elevator at floor 5
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 0
+Thread sleeping for 1 seconds
+The elevator is now traveling up
+Number of people waiting at floor:
+Floor Number                            Number of People
+0                               0
+1                               0
+2                               0
+3                               0
+4                               0
+5                               1
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 5
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 5
+The elevator is now traveling down
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+Person 0: Boarded elevator from floor 5 to floor 4
+The elevator is stopping at floor 4
+Thread sleeping for 1 seconds
+The elevator is delivering passengers to floor 4
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+Passenger 0: Got off elevator at floor 4
+Passenger 0: Wandering for 1 second(s)
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+Person 0: Waiting for elevator at floor 4
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 0
+Thread sleeping for 1 seconds
+The elevator is now traveling up
+Number of people waiting at floor:
+Floor Number                            Number of People
+0                               0
+1                               0
+2                               0
+3                               0
+4                               1
+5                               0
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 4
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 4
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+Person 0: Waiting for the elevator to travel right direction
+The elevator is now traveling down
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 4
+Thread sleeping for 1 seconds
+The elevator is loading passengers from floor 4
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+Person 0: Boarded elevator from floor 4 to floor 0
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 0
+Thread sleeping for 1 seconds
+The elevator is stopping at floor 0
+Thread sleeping for 1 seconds
+The elevator is delivering passengers to floor 0
+The elevator is now traveling up
+Number of people waiting at floor:
+Floor Number                            Number of People
+0                               0
+1                               0
+2                               0
+3                               0
+4                               0
+5                               0
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+Passenger 0: Got off elevator at floor 0
+Passenger 0: Wandering for 2 second(s)
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+Passenger 0: Left the building.  Thread exiting.
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is moving to floor 5
+Thread sleeping for 1 seconds
+The elevator is now traveling down
+The elevator is moving to floor 4
+Thread sleeping for 1 seconds
+The elevator is moving to floor 3
+Thread sleeping for 1 seconds
+The elevator is moving to floor 2
+Thread sleeping for 1 seconds
+The elevator is moving to floor 1
+Thread sleeping for 1 seconds
+The elevator is moving to floor 0
+Thread sleeping for 1 seconds
+The elevator is now traveling up
+Number of people waiting at floor:
+Floor Number                            Number of People
+0                               0
+1                               0
+2                               0
+3                               0
+4                               0
+5                               0
+The elevator has no passengers waiting
+Thread sleeping for 8 seconds
+All passengers have left the building
+Elevator Thread exiting
