@@ -8,19 +8,20 @@
 #include <string.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <math.h>
 
 //Function Prototypes
-int prime(void);
 void parseParameters(int argc, char **argv);
 void initProcess();
-void signalHandler(int signum);
+void continueSignalHandler(int signum);
+void suspendSignalHandler(int signum);
+void terminateSignalHandler(int signum);
 
 //Global Variables
-long unsigned int largestPrime;
+volatile long unsigned int largestPrime;
 int processNumber;
 int priority;
 __pid_t processPid;
-int processStarted = 0;
 
 //defines
 #define OPTIONS_ERROR_EXIT_STATUS       2
@@ -39,10 +40,7 @@ int main(int argc, char **argv)
     long unsigned int checkCurrrent = 1234567890; //
     int counter; //counter to count from 3 to n-1 (by 2's)
 
-    //pause the process on creation until it is scheduled
-    kill(processPid, SIGTSTP);
-
-    //This will print after the pause, so the first time the process is scheduled
+    //This will print the first time the process is scheduled
     fprintf(stdout, "Process %d: My priority is %d, my PID is %d: I just got started.\n ",
             processNumber, priority, processPid);
     fprintf(stdout, "I am starting with the number %lu to find the next prime number.\n", checkCurrrent);
@@ -53,7 +51,9 @@ int main(int argc, char **argv)
     while (1)
     {
         int isPrime = 1; //is this number prime?
-        for (counter = 2; counter < checkCurrrent; counter += 1)
+        long double primeCheckLimit = sqrtl((long double)checkCurrrent);
+
+        for (counter = 2; counter < primeCheckLimit; counter += 1)
         {
             if (checkCurrrent % counter == 0)
             {
@@ -67,46 +67,39 @@ int main(int argc, char **argv)
         {
             //The number is prime
             largestPrime = checkCurrrent;
-         }
+        }
         //go to the next odd integer
         checkCurrrent += 1;
     }
 }
 
-void signalHandler(int signum)
+void continueSignalHandler(int signum)
+{
+    //resume signal
+    fprintf(stdout, "Process %d: My priority is %d, my PID is %d: I just got resumed.\n",
+            processNumber, priority, processPid);
+    fprintf(stdout, "Highest prime number I found is %lu.\n", largestPrime);
+    fflush(stdout);
+}
+
+void suspendSignalHandler(int signum)
 {
     //Suspend signal
-    if (signum == SIGTSTP)
-    {
-        if (processStarted)
-        {
-            fprintf(stdout, "Process %d: My priority is %d, my PID is %d: I am about to be suspended.\n",
-                    processNumber, priority, processPid);
-            fprintf(stdout, "Highest prime number I found is %lu.\n", largestPrime);
-        }
-    }
+    fprintf(stdout, "Process %d: My priority is %d, my PID is %d: I am about to be suspended.\n",
+            processNumber, priority, processPid);
+    fprintf(stdout, "Highest prime number I found is %lu.\n", largestPrime);
+    fflush(stdout);
+}
 
-    //Continue signal
-    else if (signum == SIGCONT)
-    {
-        if (processStarted)
-        {
-            fprintf(stdout, "Process %d: My priority is %d, my PID is %d: I just got resumed.\n",
-                    processNumber, priority, processPid);
-            fprintf(stdout, "Highest prime number I found is %lu.\n", largestPrime);
-        }
-        processStarted = 1;
-    }
-
+void terminateSignalHandler(int signum)
+{
     //Terminate signal
-    else if (signum == SIGTERM)
-    {
-        fprintf(stdout, "Process %d: My priority is %d, my PID is %d: I completed my task and I am exiting.\n",
-                processNumber, priority, processPid);
-        fprintf(stdout, "Highest prime number I found is %lu.\n", largestPrime);
-        //the sigterm signal wasn't killing the prime process by itself in testing
-        kill(processPid, SIGKILL); //make sure it is dead
-    }
+    fprintf(stdout, "Process %d: My priority is %d, my PID is %d: I completed my task and I am exiting.\n",
+            processNumber, priority, processPid);
+    fprintf(stdout, "Highest prime number I found is %lu.\n", largestPrime);
+    //the sigterm signal wasn't killing the prime process by itself in testing
+    fflush(stdout);
+    kill(processPid, SIGKILL); //make sure it is dead
 }
 
 void initProcess()
@@ -117,25 +110,24 @@ void initProcess()
 
 
     //Create new sigaction struct and set all its values to 0
-    struct sigaction stopAction, alarmAction, killAction;
-    memset(&stopAction, 0, sizeof (stopAction));
-    memset(&alarmAction, 0, sizeof (alarmAction));
-    memset(&killAction, 0, sizeof (killAction));
+    struct sigaction suspendAction, continueAction, terminateAction;
+    memset(&suspendAction, 0, sizeof (suspendAction));
+    memset(&continueAction, 0, sizeof (continueAction));
+    memset(&terminateAction, 0, sizeof (terminateAction));
     //Set my handler to the signal handler
-    stopAction.sa_handler = signalHandler;
-    alarmAction.sa_handler = signalHandler;
-    killAction.sa_handler = signalHandler;
+    suspendAction.sa_handler = suspendSignalHandler;
+    continueAction.sa_handler = continueSignalHandler;
+    terminateAction.sa_handler = terminateSignalHandler;
 
     /* Install the signalHandler as the signal handler for SIGTSTP. */
-    sigaction (SIGTSTP, &stopAction, NULL);
+    sigaction (SIGTSTP, &suspendAction, NULL);
     /* Install the signalHandler as the signal handler for SIGALRM. */
-    sigaction (SIGCONT, &alarmAction, NULL);
+    sigaction (SIGCONT, &continueAction, NULL);
     /* Install the signalHandler as the signal handler for SIGTERM. */
-    sigaction (SIGTERM, &killAction, NULL);
+    sigaction (SIGTERM, &terminateAction, NULL);
 
 
     fprintf(stdout, "Process %d has been created and is awaiting scheduling\n", processPid);
-
 
 }
 

@@ -8,36 +8,25 @@
 int schedulerProgram()
 {
     //TODONE: Parse Schedules
-    //Parses the schedule and initializes the processes
+
+    //Parses the schedule and creates the process structs
     //the processes then wait to be scheduled to execute
     parseSchedule();
-    scheduler.runningProcess = -1;
 
-    //TODO: set the timer action (aka the scheduler)
+    //TODONE: set the timer action (aka the scheduler)
     struct sigaction alarmAction;
     memset(&alarmAction, 0, sizeof (alarmAction));
     alarmAction.sa_handler = timerHandler;
     /* Install the timerHandler as the signal handler for SIGAlRM. */
     sigaction (SIGALRM, &alarmAction, NULL);
-
     //TODONE: Start the timer
     sleep(2);
     initTimer();
-    //TODONE: Loop through the schedule until all the bursts are empty
-    int counter;
-    int schedulerComplete = 0;
 
     //The scheduler is triggered by the sigalarm signal
-    while(!schedulerComplete)
-    {
-        schedulerComplete = 1;
-        for (counter = 0; counter < scheduler.numberOfProcesses; counter++)
-        {
-            //If a process still has time remaining, scheduler is not complete
-            if (scheduler.processArray[counter].burstTime != 0)
-                schedulerComplete = 0;
-        }
-    }
+    //Wait for all processes to complete
+    while(scheduler.numberOfProcesses > scheduler.processesCompleted);
+
 
 
     return 0;
@@ -52,15 +41,17 @@ int parseSchedule()
     while((result = fgets(buffer, STDIN_BUFFER_SIZE , stdin)) != NULL && result != '\0')
     {
         //Parse the input file to get the process scheduling data
-        PROCESS newProcess = constructProcess(buffer);
-        //initialize the process to get the PID
-        newProcess.pid = initializeProcess(&newProcess);
+        PROCESS newProcess;
+        constructProcess(buffer, &newProcess);
+
         //add this process to the array of child processes
         scheduler.processArray[newProcess.processNumber] = newProcess;
         processCount++;
     }
 
     scheduler.numberOfProcesses = processCount;
+    scheduler.processesCompleted = 0;
+
     if (processCount == 0)
     {
         fprintf( stdout, "Error: No processes were read from input\n");
@@ -69,40 +60,6 @@ int parseSchedule()
     return 0;
 }
 
-
-
-PROCESS constructProcess(char* inputLine)
-{
-    //Create a new Process
-    PROCESS newProcess;
-    //File is assumed to not have errors
-    //I also assume, based on the pdf that the values are separated by a space
-    sscanf(inputLine, "%d %d %d %d", &newProcess.processNumber, &newProcess.arrivalTime,
-            &newProcess.burstTime, &newProcess.priority);
-
-    return newProcess;
-}
-
-__pid_t initializeProcess(PROCESS *process)
-{
-    __pid_t childPid = fork();
-
-    if (childPid == 0)
-    {
-        //put all the arguments into char arrays
-        char processNumberArg[10];
-        char processPriorityArg[10];
-        char processPIDArg[10];
-        sprintf(processNumberArg, "-n %d", process->processNumber);
-        sprintf(processPriorityArg, "-p %d", process->priority);
-        sprintf(processPIDArg, "-d %d", getpid());
-
-        //child process switch task
-        execlp("./prime.o", "main", processNumberArg, processPriorityArg, processPIDArg, NULL);
-    }
-    //pid of the new process
-    return childPid;
-}
 
 void initTimer()
 {
@@ -123,69 +80,65 @@ void initTimer()
 
 void timerHandler(int signum)
 {
+    //Increment the current time
     scheduler.currentTime++;
+    fprintf(stdout, "Timer: %d\n", scheduler.currentTime);
+    ProcessNode *oldHead = scheduler.priorityQueue.head;
+    int headUnchanged = 1;
 
-    int changeCurrentProcess = 0;
-    int newProcess = -1;
-    int counter = 0;
 
-    if (scheduler.runningProcess != -1 && scheduler.processArray[scheduler.runningProcess].burstTime > 0)
+    //Check if the head has completed
+    if (scheduler.priorityQueue.head != NULL)
     {
-        scheduler.processArray[scheduler.runningProcess].burstTime--;
-        if ( scheduler.processArray[scheduler.runningProcess].burstTime == 0)
+        //if my head process burst time has reached 0
+        if (scheduler.priorityQueue.head->process->burstTime <= 0)
         {
-            fprintf( stdout, "Scheduler: Time Now: %d seconds\n", scheduler.currentTime);
-            fprintf( stdout, "Terminating Process %d (Pid %d)\n",
-                    scheduler.runningProcess, scheduler.processArray[scheduler.runningProcess].pid);
-            kill(scheduler.processArray[scheduler.runningProcess].pid, SIGTERM);
+            //The process has executed all of its burst time
+            ProcessNode *completedNode = removeHeadFromPLinkedList(&scheduler.priorityQueue);
+            //Terminate it
+            terminateProcess(completedNode->process, scheduler.currentTime);
+            scheduler.processesCompleted++;
+            headUnchanged = 0;
         }
     }
 
-
+    //Check if any processes have arrived at this time
+    int counter;
     for (counter = 0; counter < scheduler.numberOfProcesses; counter++)
     {
-        PROCESS currentProcess = scheduler.processArray[counter];
-        if (newProcess == -1 && currentProcess.burstTime > 0)
+        if (scheduler.processArray[counter].arrivalTime == scheduler.currentTime)
         {
-            if (currentProcess.burstTime > 0)
-                newProcess = currentProcess.processNumber;
-        }
-        else if (currentProcess.priority < scheduler.processArray[newProcess].priority
-                    && currentProcess.burstTime> 0)
-        {
-            newProcess = currentProcess.processNumber;
+            //This process has just arrived
+            fprintf(stdout, "Process Arrived: %d at arrival time%d\n", counter, scheduler.processArray[counter].arrivalTime);
+            //add it to the queue
+            ProcessNode newNode;
+            newNode.process = &scheduler.processArray[counter];
+            //will be zero if this was added to the front of the linked list
+            if (addPNodeToPLinkedList(&scheduler.priorityQueue, &newNode) == 0)
+            {
+                headUnchanged = 0;
+            }
         }
     }
 
-    if (newProcess == -1)
-    {
-        //all processes are complete
-    }
-    else if (newProcess == scheduler.runningProcess)
-    {
-        //still the same process running
-    }
-    else
-    {
-        //switching to new process
 
-        //suspend running process
-        if (scheduler.runningProcess != -1)
+    //Decrement the current process burst time
+    if (scheduler.priorityQueue.head != NULL)
+    {
+        //if the head changes, I need to suspend the running process and resume the head
+        if (!headUnchanged)
         {
-            fprintf( stdout, "Scheduler: Time Now: %d seconds\n", scheduler.currentTime);
-            fprintf( stdout, "Suspending Process %d (Pid %d)\n",
-                     scheduler.runningProcess, scheduler.processArray[scheduler.runningProcess].pid);
-            kill(scheduler.processArray[scheduler.runningProcess].pid, SIGTSTP);
+            if (oldHead != NULL)
+                suspendProcess(oldHead->process, scheduler.currentTime);
+            if(scheduler.priorityQueue.head != NULL)
+                resumeProcess(scheduler.priorityQueue.head->process, scheduler.currentTime);
+
         }
 
-        //start new process
-        fprintf( stdout, "Scheduler: Time Now: %d seconds\n", scheduler.currentTime);
-        fprintf( stdout, "Scheduling Process %d (Pid %d)\n",
-                 newProcess, scheduler.processArray[newProcess].pid);
-        kill(scheduler.processArray[newProcess].pid, SIGCONT);
-
-        scheduler.runningProcess = newProcess;
+        //Decrement the head's burst time
+        burstProcessOneSecond(scheduler.priorityQueue.head->process);
     }
+
 }
 
 
