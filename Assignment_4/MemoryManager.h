@@ -1,6 +1,12 @@
-//
-// Created by caspi on 12/5/2018.
-//
+/*
+ *Author: Caspian Peavyhouse
+ *Assignment Number: A4
+ *Date of Submission: 12/07/2018
+ *Name of this file: MemoryManager.h
+ *Description of the program:
+ *Memory Manager - simulates demand paging between the RAM and disk
+ */
+
 
 #ifndef ASSIGNMENT_4_MEMORYMANAGER_H
 #define ASSIGNMENT_4_MEMORYMANAGER_H
@@ -39,9 +45,9 @@ typedef struct DataFrame DATAFRAME;
 uint8_t* RAM; //[FRAME_COUNT * FRAME_SIZE];
 int* pageTable; //[PAGE_COUNT];
 long unsigned int* lruTable; //[FRAME_COUNT];
-long unsigned int lruCounter;
-long unsigned int pageFaults;
-int pageFault;
+long unsigned int lruCounter; //number of memory reads, most current memory reads
+long unsigned int pageFaults; //number of page faults
+int pageFault; //did the current read pagefault
 
 
 //function prototypes
